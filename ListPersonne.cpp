@@ -1,4 +1,8 @@
+#include <fstream>
 #include "ListPersonne.h"
+
+using namespace std;
+
 
 ListPersonne::ListPersonne()
 {
@@ -63,5 +67,27 @@ void ListPersonne::afficherRegistre()
     for (vector<Personne>::iterator i = registre.begin(); i != registre.end(); i++)
     {   
         i->displayPersonne();
+    }
+}
+
+
+
+// sauver les données dans un fichier excel
+void ListPersonne::saveData() 
+{
+    ofstream outFile;
+	// variable pour stocker le nom du fichier
+	string fichier;
+	cout << "Entrer le nom du fichier où on : "; 
+	cin >> fichier;
+    fichier += ".xls"; 
+	outFile.open(fichier);
+	if (outFile) {
+		outFile << "Nom\tPrenom\tAge" << endl;
+		for (vector<Personne>::iterator i = registre.begin(); i != registre.end(); i++) 
+        {
+			outFile << i->getLastname() << "\t" << i->getFirstname() << "\t" << i->getAge() << endl ;
+		}
+		outFile << endl;
     }
 }

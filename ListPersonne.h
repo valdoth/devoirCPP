@@ -16,4 +16,5 @@ class ListPersonne
         void rechercherPersonne(Personne personne);
         void afficherRegistre();
 
+        void saveData();
 };

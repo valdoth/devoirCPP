@@ -1,5 +1,7 @@
 #include "ListPersonne.h"
 
+
+
 int main()
 {
     Personne test1("valdo","tsiaro", 20);
@@ -37,6 +39,7 @@ int main()
     test.afficherRegistre();
     cout << endl;
 
+    test.saveData();
     cout << "Supprimer une personne dans le registre.\n";
     test.supprimerPersonne(test1);
     cout << endl;
@@ -44,6 +47,7 @@ int main()
     cout << "Afficher les persones dans le registre: \n";
     test.afficherRegistre();
     cout << endl;
+
 
     return 0;
 }
