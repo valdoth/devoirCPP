@@ -53,7 +53,7 @@ void ListPersonne::rechercherPersonne(Personne personne)
     {
         if (i->getLastname() == personne.getLastname() && i->getFirstname() == personne.getFirstname() && i->getAge() == personne.getAge()) 
         {
-            cout << "Personne trouvee: \n";
+            cout << "Personne trouvee: ";
             i->displayPersonne();
             return;
         }
@@ -78,7 +78,7 @@ void ListPersonne::saveData()
     ofstream outFile;
 	// variable pour stocker le nom du fichier
 	string fichier;
-	cout << "Entrer le nom du fichier où on : "; 
+	cout << "Entrer le nom du fichier excel ou on va va enregistrer le registre: "; 
 	cin >> fichier;
     fichier += ".xls"; 
 	outFile.open(fichier);

@@ -42,9 +42,9 @@ void Personne::setFirstname(string prenom)
     firstname = prenom;
 }
 
-void Personne::setAge(int age)
+void Personne::setAge(int ages)
 {
-    age = age;
+    age = ages;
 }
 
 // afficher les informations de la personne
